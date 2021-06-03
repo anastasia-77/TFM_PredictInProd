@@ -4,6 +4,7 @@ from datetime import datetime
 import pytz
 import pandas as pd
 import joblib
+import requests
 
 #---CORS 'Cross-Origin Resource Sharing' allow API to be quite open
 # and to allow developers to plug it in the code,
@@ -22,7 +23,7 @@ app.add_middleware(
 #--- Create a root endpoint to welcome the developers using our API.
 @app.get("/")
 def index():
-    return {"greeting": "Hello world"}
+    return {"greeting": "Hello world_2"}
 
 
 @app.get("/predict_test")
@@ -92,5 +93,3 @@ def predict(
 
     # return type: dict
     return {'prediction' : res[0]}
-
-
